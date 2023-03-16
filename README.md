@@ -8,3 +8,4 @@ wl-clipboard
 waybar
 sway-launcher-desktop
 polkit-gnome
+Hack font
