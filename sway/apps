@@ -1,0 +1,26 @@
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 5
+set $menu exec $term --class=launcher -e /usr/bin/sway-launcher-desktop
+for_window [app_id="yad"] floating enable
+
+assign [class="com.github.wwmm.easyeffects"] 10
+assign [class="corectrl"] 10
+assign [class="firefox"] 2
+
+for_window [app_id="com.github.wwmm.easyeffects"] move container to workspace 10
+for_window [app_id="corectrl"] move container to workspace 10
+for_window [app_id="firefox"] move container to workspace 2
+
+exec_always mako --font 'Source Code Pro 10' --background-color '#002b36' --text-color '#839496' --default-timeout 5000 --width 400 --markup 1 --border-radius
+
+exec {
+    blueman-applet
+    corectrl
+    easyeffects
+    steam-runtime
+    /usr/bin/polychromatic-tray-applet
+    MOZ_ENABLE_WAYLAND=1 librewolf
+    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+}
+
+bindsym $mod+n exec /usr/bin/nemo
+bindsym $mod+s exec /usr/bin/steam

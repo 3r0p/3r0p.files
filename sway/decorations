@@ -1,0 +1,22 @@
+set $white  #FFFFFF
+set $white1 #F2EEEDD0
+set $black1 #000000
+set $blue1  #87CEFA
+set $pink1  #FF69B4
+set $rgba   #00000000
+
+output * bg ~/a.jpg fill
+
+client.focused          $black1    $black1    $black1    $black1     $black1
+client.focused_inactive $black1    $black1    $black1    $black1    $black1
+client.unfocused        $black1    $black1    $black1    $black1    $black1
+client.urgent           $black1    $black1    $black1     $black1    $black1
+
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+   gsettings set org.gnome.desktop.interface icon-theme 'Tela-black-dark'
+   swaymsg seat seat0 xcursor_theme McMojave-cursors
+   gsettings set org.gnome.desktop.interface gtk-theme 'MonoThemeDark'
+   gsettings set org.gnome.desktop.interface 'Tela-black-dark'
+   gsettings set org.gnome.desktop.interface cursor-theme 'McMojave-cursors'
+}

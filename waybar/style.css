@@ -1,0 +1,66 @@
+* {
+    border:        none;
+    border-radius: 0;
+    font-family:   Sans;
+    font-size:     14px;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+}
+
+window {
+    color:      rgb(255, 255, 255);
+    background: transparent;
+}
+
+window#waybar.solo {
+    color:      rgb(0, 0, 0);
+    background: transparent;
+}
+
+#workspaces {
+    margin: 0 5px;
+}
+
+#workspaces button {
+    padding:    0 5px;
+    color:      rgba(217, 216, 216, 0.4);
+}
+
+#workspaces button.visible {
+    color:      rgba(217, 216, 216, 1);
+}
+
+#workspaces button.focused {
+    border-top: 3px solid rgba(217, 216, 216, 1);
+    border-bottom: 3px solid rgba(217, 216, 216, 0);
+}
+
+#workspaces button.urgent {
+    color:      rgba(238, 46, 36, 1);
+}
+
+#mode, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather {
+    margin:     0px 1px 0px 1px;  
+    min-width:  14px;
+}
+
+#clock {
+    margin:     0px 10px 0px 10px;
+    min-width:  7px;
+}
+
+#custom-storage.warning {
+    color:      rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+    color:      rgba(238, 46, 36, 1);
+}
+#clock {
+    color:      rgb(255, 255, 255);
+    margin:     0px 6px 0px 6px;
+    min-width:  7px;
+}
+
+ 
